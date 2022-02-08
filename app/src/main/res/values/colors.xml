@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Blueberry"> #6B7A8F</color>
+    <color name="green">#81c784</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#454545</color>
+    <color name="blue_gray">#1f445b</color>
+    <color name="errorRed">#ef5350</color>
+
+    <color name="Primary_Dark">#75ccb9</color>
+    <color name="Secondary">#f6dcce</color>
+    <color name="Third">#f5e0cd</color>
+    <color name="Third_Light">#ffffff</color>
+    <color name="Third_Dark">#382c36</color>
+
+</resources>

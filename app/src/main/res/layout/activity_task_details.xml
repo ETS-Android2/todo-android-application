@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".TaskDetails">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@color/Third"
+        app:layout_constraintBottom_toTopOf="@+id/btnDeadline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="72dp"
+            android:fontFamily="@font/product_sans_font"
+            android:text="What to do?"
+            android:textColor="@color/Third_Dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnHelp"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.115" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginBottom="26dp"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/ic_baseline_arrow_back_ios_24"
+            android:foregroundGravity="center"
+            android:textAlignment="center"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/tvDeadline"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnHelp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="27dp"
+            android:background="@android:color/transparent"
+            android:foreground="@drawable/ic_baseline_help_24"
+            android:foregroundGravity="center"
+            android:padding="2dp"
+            android:textAlignment="center"
+            app:cornerRadius="20dp"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+        <EditText
+            android:id="@+id/etTaskName"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/multilinedesign"
+            android:backgroundTint="@color/Third_Dark"
+            android:ems="10"
+            android:fontFamily="@font/product_sans_font"
+            android:gravity="center"
+            android:inputType="textCapSentences|textCapCharacters"
+            android:maxLength="15"
+            android:textColor="@color/white"
+            android:textColorHint="#808080"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDeadline" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/odin_rounded"
+            android:text="Task Name:"
+            android:textColor="@color/Third_Dark"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/etTaskName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/product_sans_font"
+            android:paddingBottom="3dp"
+            android:text="Deadline:"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Third_Dark"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/etTaskName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etTaskName">
+
+            <SeekBar
+                android:id="@+id/sbDifficulty"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="16dp"
+                android:max="5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/sbProgress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tickMarkTint="@color/Blueberry" />
+
+            <TextView
+                android:id="@+id/sbProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/product_sans"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/Third_Dark"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/sbDifficulty"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/mlNotes"
+        android:layout_width="match_parent"
+        android:layout_height="338dp"
+        android:layout_weight="1"
+        android:background="@drawable/task_bg3"
+        android:cursorVisible="true"
+        android:ems="10"
+        android:fontFamily="@font/product_sans"
+        android:gravity="top"
+        android:hint="Write something..."
+        android:inputType="textMultiLine|textCapSentences"
+        android:paddingLeft="40dp"
+        android:paddingTop="45dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="25dp"
+        android:textColor="@color/Third_Dark"
+        android:textColorHint="#808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDeadline"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/product_sans"
+        android:gravity="center"
+        android:text="Add Notes (Optional)"
+        android:textColor="#656565"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/mlNotes"
+        app:layout_constraintEnd_toEndOf="@+id/mlNotes"
+        app:layout_constraintStart_toStartOf="@+id/mlNotes"
+        app:layout_constraintTop_toTopOf="@+id/mlNotes"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Add Task"
+        android:src="@drawable/ic_baseline_check_24"
+        app:backgroundTint="@color/Third_Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnDeadline"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/product_sans"
+        android:text="Pick Deadline"
+        app:backgroundTint="#382c36"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.449" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
